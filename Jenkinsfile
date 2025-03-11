@@ -23,6 +23,7 @@ pipeline {
                 }
             }
             steps {
+		sh 'rm -rf *'
                 git branch: 'main', url: 'https://github.com/alealbaladejo/examen_jenkins.git'
                 sh 'pip install --upgrade pip'
                 sh 'pip install -r requirements.txt'
